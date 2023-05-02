@@ -2,10 +2,10 @@
   "name": "parcel-project-template",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://github.com/ColonelMelnyk/Homework_H8",
+  "homepage": "https://github.com/ColonelMelnyk/Homework_H8.git",
   "scripts": {
     "start": "parcel src/*.html --open chrome --port 5555",
-    "build": "parcel build src/*.html --public-url /Homework_H8/"
+    "build": "parcel build src/*.html --public-url /Homework_H8.git/"
   },
   "repository": {
     "type": "git",
