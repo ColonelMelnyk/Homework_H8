@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://github.com/ColonelMelnyk/Homework_H8",
   "scripts": {
-    "start": "parcel src/*.html --open chrome --port 5555",
+    "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Homework_H8/"
   },
   "repository": {
@@ -18,7 +18,8 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
-    "modern-normalize": "^1.1.0"
+    "modern-normalize": "^1.1.0",
+    "simplelightbox": "^2.13.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
