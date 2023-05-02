@@ -4,7 +4,7 @@
   "description": "",
   "homepage": "https://github.com/ColonelMelnyk/Homework_H8.git",
   "scripts": {
-    "start": "parcel src/*.html --open chrome --port 5555",
+    "start": "parcel src/*.html",
     "build": "parcel build src/*.html --public-url /Homework_H8.git/"
   },
   "repository": {
