@@ -1,13 +1,12 @@
-import { throttle } from "lodash";
+import  throttle  from "lodash.throttle";
 const inputEmail = document.querySelector('input[type="email"]');
 const areaMsg = document.querySelector('textarea[name="message"]');
-const submitBtn = document.querySelector('button[type="submit"]');
 const form = document.querySelector('.feedback-form');
-const LOCAL_KEY = "feedback-form-state";
+const LOCAL_KEY = 'feedback-form-state';
 const dataStorage = {};
 setInputValueFromStorage();
 form.addEventListener('input', throttle(storeData, 500))
-submitBtn.addEventListener('submit', clearData);
+form.addEventListener('submit', clearData);
 function storeData(evt){
     dataStorage[evt.target.name]= evt.target.value;
     localStorage.setItem(LOCAL_KEY, JSON.stringify(dataStorage));
@@ -18,13 +17,21 @@ function setInputValueFromStorage(){
         const storage = JSON.parse(inputArray);
         areaMsg.value = storage.message;
         inputEmail.value = storage.email;
-        
     }
 };
 function clearData(evt){
-    console.log(JSON.parse(LOCAL_KEY));
-    console.log(areaMsg.value);
-    console.log(inputEmail.value); 
+    evt.preventDefault();
+    const clearDataStorage = localStorage.getItem(LOCAL_KEY);
+    const clearDataStorageJSON = JSON.parse(clearDataStorage);
+    if(areaMsg.value ==="" || inputEmail.value === ""){
+        alert("Input required!");
+       return;
+    }else{
+       console.log(clearDataStorageJSON);
+        console.log(areaMsg.value);
+        console.log(inputEmail.value); 
+    }
+   
     localStorage.removeItem(LOCAL_KEY);
     form.reset();
 };
