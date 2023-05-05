@@ -28,10 +28,10 @@ function clearData(evt){
        return;
     }else{
        console.log(clearDataStorageJSON);
-        console.log(areaMsg.value);
-        console.log(inputEmail.value); 
     }
    
     localStorage.removeItem(LOCAL_KEY);
     form.reset();
+    delete dataStorage.email;
+    delete dataStorage.message;
 };
