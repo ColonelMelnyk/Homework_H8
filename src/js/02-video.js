@@ -9,5 +9,10 @@ const onPlay = function({seconds}) {
 };
 player.on('timeupdate', throttle(onPlay, 1000));
 const currentTime = localStorage.getItem(STORAGE_KEY);
-  console.log(JSON.parse(currentTime));
-  player.setCurrentTime(currentTime);
+  if(currentTime === null){
+   return;
+  }else{
+    console.log(JSON.parse(currentTime));
+    player.setCurrentTime(currentTime);
+  }
+ 
