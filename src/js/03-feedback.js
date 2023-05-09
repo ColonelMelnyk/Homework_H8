@@ -28,7 +28,7 @@ function clearData(evt){
     evt.preventDefault();
     const clearDataStorage = localStorage.getItem(LOCAL_KEY);
     const clearDataStorageJSON = JSON.parse(clearDataStorage);
-    if(areaMsg.value ==="" || inputEmail.value === ""){
+    if(areaMsg.value ==="" || inputEmail.value ===""){
         alert("Input required!");
        return;
     }else{
